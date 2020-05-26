@@ -18,6 +18,8 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
+import org.springframework.boot.test.mock.mockito.MockBean;
+
 import com.assignment.service.MovieService;
 
 @RunWith(SpringRunner.class)
@@ -26,7 +28,7 @@ import com.assignment.service.MovieService;
 public class MovieControllerTest {
 	private static final Logger LOGGER = LoggerFactory.getLogger(MovieControllerTest.class);
 	
-	@Autowired
+	@MockBean
 	private MovieService movieService;
 	@Autowired
 	private MockMvc mockMvc;
